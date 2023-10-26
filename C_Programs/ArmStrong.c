@@ -1,19 +1,21 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int num, originalNum, remainder, result = 0;
     printf("Enter an integer: ");
     scanf("%d", &num);
     originalNum = num;
 
-    while (originalNum != 0) {
-       // remainder contains the last digit
+    while (originalNum != 0)
+    {
+        // remainder contains the last digit
         remainder = originalNum % 10;
-        
-       result += remainder * remainder * remainder;
-        
-       // removing last digit from the orignal number
-       originalNum /= 10;
+
+        result += remainder * remainder * remainder;
+
+        // removing last digit from the orignal number
+        originalNum /= 10;
     }
 
     if (result == num)
